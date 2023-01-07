@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="#FAF9F9"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="191dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="191dp"
+        android:layout_marginBottom="7dp"
+        android:text="Date"
+        android:textColor="#FBFAFA"
+        app:layout_constraintBottom_toTopOf="@+id/cityTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/cityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="193dp"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="20dp"
+        android:text="City"
+        android:textColor="#F4F3F3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherimageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/weatherDescTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="149dp"
+        android:text="Weather condition"
+        android:textColor="#F8F6F6"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tempTextView" />
+
+    <TextView
+        android:id="@+id/farenheitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="278dp"
+        android:text="°F"
+        android:textColor="#FBF8F8"
+        app:layout_constraintStart_toEndOf="@+id/tempTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/weatherimageView"
+        android:layout_width="44dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="12dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/tempTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/icon_showerrain" />
+
+    <EditText
+        android:id="@+id/searchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="1dp"
+        android:inputType="textPersonName"
+        android:text="Choose location"
+        android:textColor="#F6F4F4"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.378"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="112dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="1dp"
+        android:text="Search"
+        app:icon="@color/white"
+        app:iconTint="#603333"
+        app:layout_constraintBottom_toTopOf="@+id/dateTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextView" />
+
+    <RadioButton
+        android:id="@+id/celsiusRadioButton"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="14dp"
+        android:checked="true"
+        android:text="Celsius"
+        android:textColor="#F4F0F0"
+        app:layout_constraintBottom_toTopOf="@+id/searchTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioButton
+        android:id="@+id/farenheitRadioButton"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="14dp"
+        android:text="Farenheit"
+        android:textColor="#F4F0F0"
+        app:layout_constraintBottom_toTopOf="@+id/searchTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/addFavButton"
+        android:layout_width="135dp"
+        android:layout_height="41dp"
+        android:layout_above="@id/hourListView"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="1dp"
+        android:text="Add to Favorites"
+        android:textSize="10sp"
+        app:iconTint="#DFD6D6"
+        app:layout_constraintBottom_toTopOf="@+id/dayListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherDescTextView"
+        app:rippleColor="#5F6465" />
+
+    <TextView
+        android:id="@+id/MinTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="21dp"
+        android:text="30"
+        android:textColor="#FAF6F6"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescTextView"
+        app:layout_constraintEnd_toStartOf="@+id/tempTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/maxTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="22dp"
+        android:text="30"
+        android:textColor="#FAF6F6"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempTextView"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="22dp"
+        android:text="Min"
+        android:textColor="#F6F4F4"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescTextView"
+        app:layout_constraintEnd_toStartOf="@+id/MinTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextView" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="203dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="22dp"
+        android:text="Max"
+        android:textColor="#F6F4F4"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherDescTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maxTextView"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextView" />
+
+    <TextView
+        android:id="@+id/favOneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="392dp"
+        android:textColor="#F6F1F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/windDirectionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="0"
+        android:textColor="#F6F4F4"
+        app:layout_constraintEnd_toStartOf="@+id/tempTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeedTextView" />
+
+    <TextView
+        android:id="@+id/windSpeedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="7dp"
+        android:text="0"
+        android:textColor="#F6F4F4"
+        app:layout_constraintBottom_toTopOf="@+id/windDirectionTextView"
+        app:layout_constraintEnd_toStartOf="@+id/weatherimageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/humidityTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="7dp"
+        android:text="0"
+        android:textColor="#F6F4F4"
+        app:layout_constraintBottom_toTopOf="@+id/pressionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherimageView"
+        app:layout_constraintTop_toBottomOf="@+id/searchButton" />
+
+    <TextView
+        android:id="@+id/pressionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="100dp"
+        android:text="0"
+        android:textColor="#F4F1F1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/farenheitTextView"
+        app:layout_constraintTop_toBottomOf="@+id/humidityTextView" />
+
+    <Button
+        android:id="@+id/favButton"
+        android:layout_width="65dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="88dp"
+        android:text="Fav"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchButton"
+        app:layout_constraintTop_toBottomOf="@+id/searchTextView" />
+
+    <RadioButton
+        android:id="@+id/gpsRadioButton"
+        android:layout_width="26dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:textColor="#F6F3F3"
+        app:layout_constraintStart_toEndOf="@+id/searchTextView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/searchTextView"
+        app:layout_constraintTop_toBottomOf="@+id/farenheitRadioButton"
+        app:srcCompat="@drawable/gps" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/windSpeedTextView"
+        app:layout_constraintTop_toBottomOf="@+id/celsiusRadioButton"
+        app:srcCompat="@drawable/windspeed" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="25dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="129dp"
+        app:layout_constraintStart_toEndOf="@+id/humidityTextView"
+        app:layout_constraintTop_toBottomOf="@+id/gpsRadioButton"
+        app:srcCompat="@drawable/humidity" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toEndOf="@+id/pressionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/barometre" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/windDirectionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/boussolle" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dayListView"
+        android:layout_width="203dp"
+        android:layout_height="188dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hourListView"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hourListView"
+        android:layout_width="203dp"
+        android:layout_height="186dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dayListView"
+        app:layout_constraintTop_toBottomOf="@+id/addFavButton"
+        tools:ignore="MissingConstraints" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/resultTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="187dp"-->
+<!--        android:layout_marginTop="26dp"-->
+<!--        android:layout_marginEnd="186dp"-->
+<!--        android:layout_marginBottom="17dp"-->
+<!--        android:text="Result"-->
+<!--        android:textColor="#F6F4F4"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/searchTextView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
