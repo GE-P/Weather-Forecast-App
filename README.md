@@ -1,4 +1,4 @@
-Weather app 
+Weather forecast app 
 --------------------
 
 Weather app made with Java for android platforms.
